@@ -1,0 +1,6 @@
+config BR2_PACKAGE_XYSSL
+	prompt "xyssl............................. Fast, open source implementation of SSL"
+	tristate
+	default m if CONFIG_DEVEL
+	help
+		http://www.xyssl.org

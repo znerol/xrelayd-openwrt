@@ -1,0 +1,8 @@
+config BR2_PACKAGE_XRELAY
+	prompt "xrelay............................ stunnel replacement based on xyssl"
+	tristate
+	default m if CONFIG_DEVEL
+	selects BR2_PACKAGE_XYSSL
+	depends BR2_PACKAGE_XYSSL
+	help
+		http://www.xyssl.org

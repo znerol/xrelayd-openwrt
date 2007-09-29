@@ -1,0 +1,4 @@
+Package: xyssl
+Priority: optional
+Section: security
+Description: Fast, open source implementation of SSL

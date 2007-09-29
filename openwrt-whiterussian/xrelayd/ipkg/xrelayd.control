@@ -1,0 +1,5 @@
+Package: xrelayd
+Priority: optional
+Section: security
+Depends: xyssl
+Description: stunnel replacement based on xyssl 

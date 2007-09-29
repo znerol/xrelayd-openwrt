@@ -1,0 +1,57 @@
+diff -Nur xyssl-0.7-x509write/include/xyssl/ssl_conf.h xyssl-0.7-x509write-minimal/include/xyssl/ssl_conf.h
+--- xyssl-0.7-x509write/include/xyssl/ssl_conf.h	2007-09-07 00:22:31.000000000 +0200
++++ xyssl-0.7-x509write-minimal/include/xyssl/ssl_conf.h	2007-09-29 13:03:53.000000000 +0200
+@@ -50,18 +50,21 @@
+  *
+ #define NO_DHM
+  */
++#define NO_DHM
+ 
+ /*
+  * Don't include the MD2 hash function
+  *
+ #define NO_MD2
+  */
++#define NO_MD2
+ 
+ /*
+  * Don't include the MD4 hash function
+  *
+ #define NO_MD4
+  */
++#define NO_MD4
+ 
+ /*
+  * Don't include the ARC4 cipher
+@@ -74,6 +77,7 @@
+  *
+ #define NO_DES
+  */
++#define NO_DES
+ 
+ /*
+  * Don't include the AES cipher
+diff -Nur xyssl-0.7-x509write/library/Makefile xyssl-0.7-x509write-minimal/library/Makefile
+--- xyssl-0.7-x509write/library/Makefile	2007-09-14 18:21:14.000000000 +0200
++++ xyssl-0.7-x509write-minimal/library/Makefile	2007-09-29 13:03:11.000000000 +0200
+@@ -17,10 +17,17 @@
+ # MicroBlaze specific options:
+ # CFLAGS += -mno-xl-soft-mul -mxl-barrel-shift
+ 
++# OBJS=aes.o       arc4.o      base64.o    bignum.o    \
++#      certs.o     des.o       dhm.o       havege.o    \
++#      md2.o       md4.o       md5.o       net.o       \
++#      rsa.o       sha1.o      sha2.o      ssl_cli.o   \
++#      ssl_srv.o   ssl_tls.o   timing.o    x509read.o  \
++#      x509write.o
++
+ OBJS=aes.o       arc4.o      base64.o    bignum.o    \
+-     certs.o     des.o       dhm.o       havege.o    \
+-     md2.o       md4.o       md5.o       net.o       \
+-     rsa.o       sha1.o      sha2.o      ssl_cli.o   \
++     certs.o                             havege.o    \
++                             md5.o       net.o       \
++     rsa.o       sha1.o                  ssl_cli.o   \
+      ssl_srv.o   ssl_tls.o   timing.o    x509read.o  \
+      x509write.o
+ 
