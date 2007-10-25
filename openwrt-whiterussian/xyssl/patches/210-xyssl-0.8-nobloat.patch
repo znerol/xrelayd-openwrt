@@ -1,0 +1,120 @@
+diff -ur xyssl-0.8/include/xyssl/config.h xyssl-0.8-nobloat/include/xyssl/config.h
+--- xyssl-0.8/include/xyssl/config.h	2007-10-20 00:00:00.000000000 +0200
++++ xyssl-0.8-nobloat/include/xyssl/config.h	2007-10-25 12:17:09.000000000 +0200
+@@ -38,13 +38,15 @@
+ 
+ /*
+  * Enable all SSL/TLS debugging messages.
+- */
++ *
+ #define XYSSL_DEBUG_MSG
++ */
+ 
+ /*
+  * Enable the checkup functions (*_self_test).
+- */
++ *
+ #define XYSSL_SELF_TEST
++ */
+ 
+ /*
+  * Enable the prime-number generation code.
+@@ -101,8 +103,9 @@
+  * Caller:
+  *
+  * This module is used for testing (ssl_client/server).
+- */
++ *
+ #define XYSSL_CERTS_C
++ */
+ 
+ /*
+  * Module:  library/debug.c
+@@ -111,8 +114,9 @@
+  *          library/ssl_tls.c
+  *
+  * This module provides debugging functions.
+- */
++ *
+ #define XYSSL_DEBUG_C
++ */
+ 
+ /*
+  * Module:  library/des.c
+@@ -121,8 +125,9 @@
+  * This module enables the following ciphersuites:
+  *      SSL_RSA_DES_168_SHA
+  *      SSL_EDH_RSA_DES_168_SHA
+- */
++ *
+ #define XYSSL_DES_C
++ */
+ 
+ /*
+  * Module:  library/dhm.c
+@@ -132,8 +137,9 @@
+  * This module enables the following ciphersuites:
+  *      SSL_EDH_RSA_DES_168_SHA
+  *      SSL_EDH_RSA_AES_256_SHA
+- */
++ *
+ #define XYSSL_DHM_C
++ */
+ 
+ /*
+  * Module:  library/havege.c
+@@ -148,16 +154,18 @@
+  * Caller:  library/x509parse.c
+  *
+  * This module enables support for MD2-signed X.509 certificates.
+- */
++ *
+ #define XYSSL_MD2_C
++ */
+ 
+ /*
+  * Module:  library/md4.c
+  * Caller:  library/x509parse.c
+  *
+  * This module enables support for MD4-signed X.509 certificates.
+- */
++ *
+ #define XYSSL_MD4_C
++ */
+ 
+ /*
+  * Module:  library/md5.c
+@@ -181,8 +189,9 @@
+  * Caller:  library/aes.c
+  *
+  * This modules adds support for the VIA PadLock on x86.
+- */
++ *
+ #define XYSSL_PADLOCK_C
++ */
+ 
+ /*
+  * Module:  library/rsa.c
+@@ -211,16 +220,18 @@
+  * Caller:
+  *
+  * This module adds support for SHA-224 and SHA-256.
+- */
++ *
+ #define XYSSL_SHA2_C
++ */
+ 
+ /*
+  * Module:  library/sha4.c
+  * Caller:
+  *
+  * This module adds support for SHA-384 and SHA-512.
+- */
++ *
+ #define XYSSL_SHA4_C
++ */
+ 
+ /*
+  * Module:  library/ssl_cli.c
+Only in xyssl-0.8-nobloat/programs: .DS_Store
+Only in xyssl-0.8-nobloat/programs/aes: .DS_Store
