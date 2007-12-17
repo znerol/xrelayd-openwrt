@@ -1,0 +1,4 @@
+Package: host
+Priority: optional
+Section: network 
+Description: used to query DNS servers for domain names and zones 

@@ -1,12 +1,12 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=xyssl
-PKG_VERSION:=0.8
+PKG_VERSION:=svn-r32+customize_cleanup
 PKG_RELEASE:=1
-PKG_MD5SUM:=5c80e021e3bca4b77fbe2429c9e61541
-PKG_SOURCE_URL:=http://www.xyssl.org/code/download
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tgz
+PKG_MD5SUM:=de3eae3e02029668b8cfe2d822254396
+PKG_SOURCE_URL:=http://znerol.ch/files
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_CAT:=zcat
-PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-svn
 PKG_INSTALL_DIR:=$(PKG_BUILD_DIR)/ipkg-install
 include $(TOPDIR)/package/rules.mk
 $(eval $(call PKG_template,XYSSL,$(PKG_NAME),$(PKG_VERSION)-$(PKG_RELEASE),$(ARCH)))
