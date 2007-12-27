@@ -1,8 +1,8 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=xrelayd
-PKG_VERSION:=0.2.1pre
+PKG_VERSION:=0.2.1pre2
 PKG_RELEASE:=1
-PKG_MD5SUM:=f8e99cd2b0f8258afca7defc8b8228c7
+PKG_MD5SUM:=05f242295fa864bb3b0b7f0712b4dfa3
 PKG_SOURCE_URL:=http://znerol.ch/files
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_CAT:=zcat
