@@ -1,0 +1,12 @@
+diff -ur xyssl-0.9-bsd/library/Makefile xyssl-0.9-bsd+shared/library/Makefile
+--- xyssl-0.9-bsd/library/Makefile	2008-03-16 15:23:22.000000000 +0100
++++ xyssl-0.9-bsd+shared/library/Makefile	2008-04-10 12:43:15.000000000 +0200
+@@ -11,7 +11,7 @@
+ # CFLAGS += -D_BSD_EXTENSION
+ 
+ # To compile as a shared library:
+-# CFLAGS += -fPIC
++CFLAGS += -fPIC
+ 
+ DLEXT=so
+ # OSX shared library extension:

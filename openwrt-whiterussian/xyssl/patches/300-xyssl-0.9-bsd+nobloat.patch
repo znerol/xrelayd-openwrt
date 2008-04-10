@@ -1,7 +1,18 @@
-diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
---- xyssl-svn-orig/include/xyssl/config.h	2007-11-24 17:22:26.000000000 +0100
-+++ xyssl-svn/include/xyssl/config.h	2007-12-08 18:53:47.000000000 +0100
-@@ -43,13 +43,15 @@
+diff -ur xyssl-0.9-bsd/include/xyssl/config.h xyssl-0.9-bsd+nobloat/include/xyssl/config.h
+--- xyssl-0.9-bsd/include/xyssl/config.h	2008-03-16 15:23:22.000000000 +0100
++++ xyssl-0.9-bsd+nobloat/include/xyssl/config.h	2008-04-10 15:14:03.000000000 +0200
+@@ -32,8 +32,9 @@
+ 
+ /*
+  * Uncomment to enable the use of assembly code.
+- */
++ *
+ #define XYSSL_HAVE_ASM
++ */
+ 
+ /*
+  * Uncomment if the CPU supports SSE2 (IA-32 specific).
+@@ -43,13 +44,15 @@
  
  /*
   * Enable all SSL/TLS debugging messages.
@@ -19,7 +30,7 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Enable the prime-number generation code.
-@@ -107,8 +109,9 @@
+@@ -107,8 +110,9 @@
   * Caller:
   *
   * This module is used for testing (ssl_client/server).
@@ -30,7 +41,7 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Module:  library/debug.c
-@@ -117,8 +120,9 @@
+@@ -117,8 +121,9 @@
   *          library/ssl_tls.c
   *
   * This module provides debugging functions.
@@ -41,7 +52,7 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Module:  library/des.c
-@@ -127,8 +131,9 @@
+@@ -127,8 +132,9 @@
   * This module enables the following ciphersuites:
   *      SSL_RSA_DES_168_SHA
   *      SSL_EDH_RSA_DES_168_SHA
@@ -52,7 +63,7 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Module:  library/dhm.c
-@@ -138,8 +143,9 @@
+@@ -138,8 +144,9 @@
   * This module enables the following ciphersuites:
   *      SSL_EDH_RSA_DES_168_SHA
   *      SSL_EDH_RSA_AES_256_SHA
@@ -63,28 +74,7 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Module:  library/havege.c
-@@ -154,16 +160,18 @@
-  * Caller:  library/x509parse.c
-  *
-  * This module enables support for (rare) MD2-signed X.509 certs.
-- */
-+ *
- #define XYSSL_MD2_C
-+ */
- 
- /*
-  * Module:  library/md4.c
-  * Caller:  library/x509parse.c
-  *
-  * This module enables support for (rare) MD4-signed X.509 certs.
-- */
-+ *
- #define XYSSL_MD4_C
-+ */
- 
- /*
-  * Module:  library/md5.c
-@@ -187,8 +195,9 @@
+@@ -189,8 +196,9 @@
   * Caller:  library/aes.c
   *
   * This modules adds support for the VIA PadLock on x86.
@@ -95,7 +85,7 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Module:  library/rsa.c
-@@ -217,16 +226,18 @@
+@@ -219,16 +227,18 @@
   * Caller:
   *
   * This module adds support for SHA-224 and SHA-256.
@@ -116,3 +106,5 @@ diff -ur xyssl-svn-orig/include/xyssl/config.h xyssl-svn/include/xyssl/config.h
  
  /*
   * Module:  library/ssl_cli.c
+Only in xyssl-0.9-bsd+nobloat/include/xyssl: config.h~
+Only in xyssl-0.9-bsd+nobloat/library: Makefile~
